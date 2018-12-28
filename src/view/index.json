@@ -1,9 +1,23 @@
 {
+  "env":"REAL",
+  "path":{
+    "html": "/view/index.html"
+  },
   "images": [
     {
-      "_id": "##img-1##",
-      "hashId": "AHEOF123FFEFf1E",
-      "url": "/images/bg/index.dddd"
+      "kageUrl": "L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL1",
+      "localUrl": "/images/bg/img_test_v_1.png"
+    },
+    {
+      "kageUrl": "L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL2",
+      "localUrl": "/images/bg/img_test_v_2.png"
+    },
+    {
+      "kageUrl": "L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL3",
+      "localUrl": "/images/bg/img_test_v_3.png"
     }
-  ]
+  ],
+  "readme":{
+
+  }
 }

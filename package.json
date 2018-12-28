@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LeadJockey/js-dev-tool#readme",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "shell-arguments": "^1.2.3"
   }
 }
