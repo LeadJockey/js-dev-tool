@@ -1,23 +1,26 @@
 {
-  "env":"REAL",
-  "path":{
-    "html": "/view/index.html"
+  "env": "REAL",
+  "derector":{
+    "author":["@arah.podo"],
+    "fe":["@shawn.thecool"],
+    "review":["@levi.seo"]
+  },
+  "structure": {
+    "dirName": "20181228_promotion",
+    "files": ["pc.html","mo.html","app.html"]
   },
   "images": [
     {
-      "kageUrl": "L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL1",
+      "kageUrl": "${content_url}L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL1",
       "localUrl": "/images/bg/img_test_v_1.png"
     },
     {
-      "kageUrl": "L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL2",
+      "kageUrl": "${content_url}L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL2",
       "localUrl": "/images/bg/img_test_v_2.png"
     },
     {
-      "kageUrl": "L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL3",
+      "kageUrl": "${content_url}L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL3",
       "localUrl": "/images/bg/img_test_v_3.png"
     }
-  ],
-  "readme":{
-
-  }
+  ]
 }
