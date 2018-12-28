@@ -1,0 +1,22 @@
+{
+  "name": "js-dev-tool",
+  "version": "1.0.0",
+  "description": ".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeadJockey/js-dev-tool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeadJockey/js-dev-tool/issues"
+  },
+  "homepage": "https://github.com/LeadJockey/js-dev-tool#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
