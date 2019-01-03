@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.js",
     "open": "opn http://localhost:3000 --'google chrome' --incognito",
+    "create": "node src/config/createFiles.js",
     "build": "node src/config/exchanger.js --path=\"index.json\"",
     "build-pub": "node src/config/exchanger.js --path=\"index.json\" --env=\"PUB\" ",
     "build-dev": "node src/config/exchanger.js --path=\"index.json\" --env=\"DEV\" "
