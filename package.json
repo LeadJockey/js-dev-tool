@@ -4,7 +4,12 @@
   "description": ".",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js",
+    "open": "opn http://localhost:3000 --'google chrome' --incognito",
+    "build": "node src/config/exchanger.js --path=\"index.json\"",
+    "build-pub": "node src/config/exchanger.js --path=\"index.json\" --env=\"PUB\" ",
+    "build-dev": "node src/config/exchanger.js --path=\"index.json\" --env=\"DEV\" "
   },
   "repository": {
     "type": "git",
@@ -17,8 +22,15 @@
   },
   "homepage": "https://github.com/LeadJockey/js-dev-tool#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
     "fs": "0.0.1-security",
+    "morgan": "^1.9.1",
     "node-pipeline": "^1.0.2",
+    "nodemon": "^1.18.9",
+    "path": "^0.12.7",
     "shell-arguments": "^1.2.3"
   }
 }

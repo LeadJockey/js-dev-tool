@@ -6,7 +6,11 @@ const config = require('../view/' + cmdArgs.path);
 const filePath = path.join(__dirname, '../view/index.html');
 
 function _replaceAll(str, asis, tobe) {
+  // asis.replace('$', '\$').replace('{', '\{').replace('}','\}')
   const regex = new RegExp(asis, 'g');
+  // console.log('regex', regex);
+  // console.log('match', str.match(regex));
+  
   return str.replace(regex, tobe);
 }
 
@@ -37,9 +41,20 @@ getFile(filePath, (data) => {
   // add process
   pl.use((results, next) => {
     let html = results[0].html
+    
     config.images.map((img) => {
-      html = _replaceAll(html, img.localUrl, img.kageUrl)
+      // if(cmdArgs.env === 'DEV'){
+      //   html = _replaceAll(html, img.kageUrl, img.localUrl);
+      // }
+
+      // if(cmdArgs.env === 'PUB'){
+        html = _replaceAll(html, img.localUrl, img.kageUrl);
+
+      // }
     });
+    // console.log('html', html);
+
+    
     next(null, { replacedImage: html });
   });
 

@@ -11,16 +11,40 @@
   },
   "images": [
     {
-      "kageUrl": "${content_url}L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL1",
-      "localUrl": "/images/bg/img_test_v_1.png"
+      "kageUrl": "${content_url}bpXzkp/hyqFdx6IeV/hUTmKf521Wb3gXrqQrbCA1",
+      "localUrl": "images/img_prm_1.png"
     },
     {
-      "kageUrl": "${content_url}L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL2",
-      "localUrl": "/images/bg/img_test_v_2.png"
+      "kageUrl": "${content_url}c11gtV/hyqE7kmeUh/WosnNgGJMD11IG9es46Kvk",
+      "localUrl": "images/img_prm_2.png"
     },
     {
-      "kageUrl": "${content_url}L5YqO/hyoXGCuF3U/HKEclmLkR3FnHw5UVRyUL3",
-      "localUrl": "/images/bg/img_test_v_3.png"
+      "kageUrl": "${content_url}6YWpp/hyqE7q70k8/4VhelAEA5uvT3ofYP4iHAk",
+      "localUrl": "images/img_prm_3.png"
+    },
+    {
+      "kageUrl": "${content_url}bfTNP6/hyoXDsgXeS/iH7DUtGXP7xIXN2pAIaQT0",
+      "localUrl": "images/img_prm_4.png"
+    },
+    {
+      "kageUrl": "${content_url}blS95t/hyqDveuO7R/S2rYEh982xCdDFCVuAjY7K",
+      "localUrl": "images/img_prm_5.png"
+    },
+    {
+      "kageUrl": "${content_url}bBth2c/hyqDozFVXi/T7lnq1xzFhBWlun69cIccK",
+      "localUrl": "images/img_prm_6.png"
+    },
+    {
+      "kageUrl": "${content_url}bin377/hyqE6ThSsr/wQlC6K5X2kAmE04O2oDWSk",
+      "localUrl": "images/img_prm_7.png"
+    },
+    {
+      "kageUrl": "${content_url}9xnuK/hyqDv6DumW/dLZHAsY6TFK36tvs3AjhC1",
+      "localUrl": "images/img_prm_8.png"
+    },
+    {
+      "kageUrl": "${content_url}GIDdf/hyqFb1mHXv/DaRdeBmK7DFjD8h6lJDqUK",
+      "localUrl": "images/img_end.png"
     }
   ]
 }
