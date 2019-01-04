@@ -32,15 +32,6 @@
   
   <div id="kakaoPromotion">
     <div id="kakaoHead">
-      <#--  ${is_alert?c}
-      ${mobileCheck?c}
-      ${is_need_update?c}
-      ${agreed?c}
-      ${eventTitle}
-      ${event_id}
-      ${appUserId}
-      ${webSourceCache}
-      ${os}  -->
       ${content_url}
       ${contextPath}
     </div>
