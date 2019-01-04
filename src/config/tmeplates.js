@@ -1,4 +1,4 @@
-exports.getDefaultLayoutTemplate = function () {
+module.exports.getDefaultLayoutTemplate = function () {
   return `
   <div id="kakaoPromotion">
     <div id="kakaoHead">
@@ -11,7 +11,7 @@ exports.getDefaultLayoutTemplate = function () {
   `;
 }
 
-exports.getDefaultMetaTemplate = function (keywords, description) {
+module.exports.getDefaultMetaTemplate = function (keywords, description) {
   return `
     <meta name="author" content="카카오페이지">
     <meta name="keywords" content="${keywords || '카카오페이지'}">
@@ -19,7 +19,7 @@ exports.getDefaultMetaTemplate = function (keywords, description) {
   `;
 }
 
-exports.getSocialShareMetaTempalte = function (title, description, imageUrl, shareUrl) {
+module.exports.getSocialShareMetaTempalte = function (title, description, imageUrl, shareUrl) {
   return `
     <meta property="og:title" content="${title || '카카오페이지 공유하기 타이틀'}" />
     <meta property="og:description" content="${description || '카카오페이지 공유하기 설명'}" />
@@ -39,7 +39,7 @@ exports.getSocialShareMetaTempalte = function (title, description, imageUrl, sha
   `;
 }
 
-exports.getPCResetCssTemplate = function () {
+module.exports.getPCResetCssTemplate = function () {
   return `
     /* reset */
     body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
@@ -50,7 +50,7 @@ exports.getPCResetCssTemplate = function () {
     input,select,textarea,button{vertical-align:middle}
     input::-ms-clear{display:none}
     button{border:0 none;background-color:transparent;cursor:pointer}
-    body{background:#000}
+    body{background:#fff}
     body,th,td,input,select,textarea,button{font-size:12px;line-height:1.5;font-family:'돋움',dotum,sans-serif;color:#333}
     a{color:#333;text-decoration:none}
     a:active, a:hover{text-decoration:underline}
@@ -63,7 +63,7 @@ exports.getPCResetCssTemplate = function () {
   `;
 }
 
-exports.getMobileResetCssTemplate = function () {
+module.exports.getMobileResetCssTemplate = function () {
   return `
     /* mobile reset */
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, button{margin:0;padding:0}
@@ -78,7 +78,7 @@ exports.getMobileResetCssTemplate = function () {
     input:checked[type='checkbox']{background-color:#666; -webkit-appearance:checkbox}
     input[type='text'], input[type='password'], input[type='submit'], input[type='search'], input[type='tel'], input[type='email'], html input[type='button'], input[type='reset']{-webkit-appearance:none;border-radius:0}
     input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
-    body{background:#000}
+    body{background:#fff}
     body, th, td, input, select, textarea, button{font-size:14px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;color:#333}
     a{color:#333;text-decoration:none}
     a:active, a:hover{text-decoration:none}
@@ -89,7 +89,7 @@ exports.getMobileResetCssTemplate = function () {
   `;
 }
 
-exports.getREADMETemplate = function () {
+module.exports.getREADMETemplate = function () {
   return `
   # 스윙키즈 데뷔무대 라이브 (예시입니다. 수정후 배포해 주세요)
   업무개요 : 라이브 이벤트 페이지 제작
@@ -124,7 +124,7 @@ exports.getREADMETemplate = function () {
   `;
 }
 
-exports.getDefaultCONFIGFormat = function () {
+module.exports.getDefaultCONFIGFormat = function () {
   return `
   
   `;

@@ -8,4 +8,7 @@ node 8 버전 이상 지원
 ```
 npm run create -- --dir={파일명}
 npm run create
+
+npm start
+npm run open
 ```

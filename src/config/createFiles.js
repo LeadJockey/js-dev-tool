@@ -3,7 +3,7 @@ const tmplate = require('./tmeplates');
 const fs = require('fs');
 const path = require('path');
 const dirname = cmdArgs.dir || 'temp';
-const files = cmdArgs.files;
+const rootPath = path.join(__dirname, '..', 'view');
 
 function createDir(rootPath, dirname) {
   const dirPath = path.join(rootPath, dirname);
@@ -27,7 +27,7 @@ function getTemplate(opts) {
   <head>
     ${opts.meta || ''}
     ${opts.socialShareMeta || ''}
-    
+
     <style>
       ${opts.reset || ''}
     </style>
@@ -41,7 +41,6 @@ function getTemplate(opts) {
 
 async function init() {
   if (!dirname) return;
-  const rootPath = path.join(__dirname, '..', 'view');
   const dirPath = path.join(rootPath, dirname);
   const templatePath = path.join(dirPath, 'templates');
   await createDir(rootPath, dirname);
@@ -66,4 +65,5 @@ async function init() {
   }));
 
 }
+
 init();

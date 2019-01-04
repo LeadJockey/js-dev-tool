@@ -8,9 +8,7 @@
     "start": "nodemon src/app.js",
     "open": "opn http://localhost:3000 --'google chrome' --incognito",
     "create": "node src/config/createFiles.js",
-    "build": "node src/config/exchanger.js --path=\"index.json\"",
-    "build-pub": "node src/config/exchanger.js --path=\"index.json\" --env=\"PUB\" ",
-    "build-dev": "node src/config/exchanger.js --path=\"index.json\" --env=\"DEV\" "
+    "build": "node src/config/replace.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +25,7 @@
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "freemarker": "^1.4.2",
     "fs": "0.0.1-security",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9",

@@ -1,12 +1,12 @@
 
   <head>
     
-  <meta name="author" content="카카오페이지">
-  <meta name="keywords" content="카카오페이지">
-  <meta name="description" content="카카오페이지">
+    <meta name="author" content="카카오페이지">
+    <meta name="keywords" content="카카오페이지">
+    <meta name="description" content="카카오페이지">
   
     
-    
+
     <style>
       
     /* mobile reset */
@@ -22,7 +22,7 @@
     input:checked[type='checkbox']{background-color:#666; -webkit-appearance:checkbox}
     input[type='text'], input[type='password'], input[type='submit'], input[type='search'], input[type='tel'], input[type='email'], html input[type='button'], input[type='reset']{-webkit-appearance:none;border-radius:0}
     input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
-    body{background:#000}
+    body{background:#fff}
     body, th, td, input, select, textarea, button{font-size:14px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;color:#333}
     a{color:#333;text-decoration:none}
     a:active, a:hover{text-decoration:none}
