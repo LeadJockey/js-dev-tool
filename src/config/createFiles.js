@@ -2,7 +2,7 @@ const cmdArgs = require('shell-arguments');
 const tmplate = require('./tmeplates');
 const fs = require('fs');
 const path = require('path');
-const dirname = cmdArgs.dir || 'temp';
+const dirname = cmdArgs.dirname || 'temp';
 const rootPath = path.join(__dirname, '..', 'view');
 
 function createDir(rootPath, dirname) {
@@ -43,11 +43,18 @@ async function init() {
   if (!dirname) return;
   const dirPath = path.join(rootPath, dirname);
   const templatePath = path.join(dirPath, 'templates');
+  const jsPath = path.join(dirPath,'js');
   await createDir(rootPath, dirname);
   await createDir(dirPath, 'images');
-  await createDir(dirPath, 'templates');
   await createFile(dirPath, 'README.md', tmplate.getREADMETemplate());
   await createFile(dirPath, 'config.json', tmplate.getDefaultCONFIGFormat());
+
+  await createDir(dirPath, 'js');
+  await createFile(jsPath, 'pc.js', tmplate.getDefaultRollupFormat());
+  await createFile(jsPath, 'mo.js', tmplate.getDefaultRollupFormat());
+  await createFile(jsPath, 'app.js', tmplate.getDefaultRollupFormat());
+
+  await createDir(dirPath, 'templates');
   await createFile(templatePath, 'pc.ftl', getTemplate({
     meta: tmplate.getDefaultMetaTemplate(),
     reset: tmplate.getPCResetCssTemplate(),
@@ -63,6 +70,7 @@ async function init() {
     reset: tmplate.getMobileResetCssTemplate(),
     layout: tmplate.getDefaultLayoutTemplate()
   }));
+  
 
 }
 

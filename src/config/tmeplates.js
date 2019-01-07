@@ -137,3 +137,11 @@ module.exports.getDefaultCONFIGFormat = function () {
   }
   `;
 }
+
+module.exports.getDefaultRollupFormat = function () {
+  return `
+import {ab} from '../../../script/common';
+
+ab(); 
+  `;
+}

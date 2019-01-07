@@ -6,9 +6,10 @@ node 8 버전 이상 지원
 
 ## command line use age
 ```
-npm run create -- --dir={파일명}
+npm run create -- --dirname={dirname}
 npm run create
-
+npm run rollup -- --dirname={dirname}
+npm run build
 npm start
 npm run open
 ```

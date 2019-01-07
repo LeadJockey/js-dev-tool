@@ -9,7 +9,7 @@
     "open": "opn http://localhost:3000 --'google chrome' --incognito",
     "create": "node src/config/createFiles.js",
     "build": "node src/config/replace.js",
-    "rollup" : "rollup src/view/temp/out.js --format iife --file src/view/temp/bundle.js"
+    "rollup": "rollup -w -c src/config/rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "path": "^0.12.7",
+    "rollup-watch": "^4.3.1",
     "shell-arguments": "^1.2.3"
   }
 }

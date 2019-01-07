@@ -1,7 +1,7 @@
 const cmdArgs = require('shell-arguments');
 const fs = require('fs');
 const path = require('path');
-const dir = cmdArgs.dir || 'temp';
+const dir = cmdArgs.dirname || 'temp';
 const env = cmdArgs.env || 'dev';
 const rootPath = path.join(__dirname, '..', 'view');
 
