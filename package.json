@@ -8,7 +8,8 @@
     "start": "nodemon src/app.js",
     "open": "opn http://localhost:3000 --'google chrome' --incognito",
     "create": "node src/config/createFiles.js",
-    "build": "node src/config/replace.js"
+    "build": "node src/config/replace.js",
+    "rollup" : "rollup src/view/temp/out.js --format iife --file src/view/temp/bundle.js"
   },
   "repository": {
     "type": "git",

@@ -15,7 +15,11 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(cors());
 
 app.use('/', require('./route'));
-// app.use('*', (req, res) => res.status(404).json({ msg:'page not found' }));
+app.use('*', (req, res) => res.status(404).json({ 
+  msg:'Page Not Found',
+  url:`localhost:${process.env.PORT}://{directory-name}/{file-name}` 
+}));
+// app.use('*', ));
 
 app.listen(process.env.PORT, () => console.log(`server started: listening on port : ${process.env.PORT}`));
 

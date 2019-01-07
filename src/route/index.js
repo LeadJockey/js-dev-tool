@@ -28,7 +28,7 @@ function getTemplateData(dirname){
     appUserId: 'selifehahfa',
     webSourceCache: '12847129',
     os: 'I',
-    content_url: path.join(__dirname, '..', 'view', dirPath, 'images/'),
+    content_url: path.join(__dirname, '..', 'view', dirname, 'images/'),
     contextPath: 'tesifls'
   }
 }
@@ -41,7 +41,7 @@ router.get('/:dir/:file', (req,res, next)=>{
   console.log('file', filename);
   console.log('target', targetPath);
   
-  fm.renderFile(path.join(dirname,'templates', `${filename}.ftl`), getTemplateData(), (err, result, errout) =>{
+  fm.renderFile(path.join(dirname,'templates', `${filename}.ftl`), getTemplateData(dirname), (err, result, errout) =>{
     res.send(!!err ? errout + err : result);
   });
 });
