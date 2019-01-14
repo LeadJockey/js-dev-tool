@@ -70,8 +70,6 @@ async function init() {
     reset: tmplate.getMobileResetCssTemplate(),
     layout: tmplate.getDefaultLayoutTemplate()
   }));
-  
-
 }
 
 init();

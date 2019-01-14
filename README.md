@@ -13,3 +13,5 @@ npm run build
 npm start
 npm run open
 ```
+
+src.format.json 작성후 npm run create

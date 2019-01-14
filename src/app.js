@@ -5,7 +5,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const cors = require('cors');
-const router = require('./route');
 
 
 app.use(logger('dev'));

@@ -1,8 +1,10 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const fs = require('fs');
 const Freemarker = require('freemarker');
-const fm = new Freemarker({root:path.join(__dirname, '..', 'view')});
+const viewRoot = path.join(__dirname, '..', 'view');
+const fm = new Freemarker({root:viewRoot});
 
 function getTemplateData(dirname){
   /**
@@ -28,10 +30,21 @@ function getTemplateData(dirname){
     appUserId: 'selifehahfa',
     webSourceCache: '12847129',
     os: 'I',
-    content_url: path.join(__dirname, '..', 'view', dirname, 'images/'),
-    contextPath: 'tesifls'
+    content_url: '',//path.join(__dirname, '..', 'view', dirname, 'images/')
+    contextPath: ''
   }
 }
+
+router.get('/', (req,res,next)=>{
+  const workList = fs.readdirSync(viewRoot).filter(file => file !== 'workList.ftl');
+  const data = {
+    workList,
+    host:`http://localhost:${process.env.PORT}`
+  };
+  fm.renderFile(path.join(viewRoot, 'workList.ftl'), data, (err, result, errout) =>{
+    res.send(!!err ? errout + err : result);
+  });
+});
 
 router.get('/:dir/:file', (req,res, next)=>{
   const dirname = req.params.dir;
@@ -41,7 +54,7 @@ router.get('/:dir/:file', (req,res, next)=>{
   console.log('file', filename);
   console.log('target', targetPath);
   
-  fm.renderFile(path.join(dirname,'templates', `${filename}.ftl`), getTemplateData(dirname), (err, result, errout) =>{
+  fm.renderFile(path.join(dirname, `${filename}.ftl`), getTemplateData(dirname), (err, result, errout) =>{
     res.send(!!err ? errout + err : result);
   });
 });

@@ -1,0 +1,60 @@
+{
+  "name": "swingkids",
+  "readme": {
+    "title": "ex) 스윙키즈 데뷔무대 라이브 프로모션 페이지 제작",
+    "manager":{
+      "planners":["@ara.podo","@sally.podo"],
+      "developers":["@shawn.thecool","@lukas.sin"],
+      "reviewers":["@levi.seo","@kerry.youbo"]
+    },
+    "info": {
+      "types": ["app","mo","pc"],
+      "workDate": "2019.01.02 (수) ~ 01.04 (금)",
+      "openDate": "2018.01.05 (금)",
+      "urls": [
+        {"name": "업무요청 아지트", "url": "https://dkt.agit.in/g/300011802/wall/318302618"},
+        {"name": "디자인 시안",    "url": "https://dkt.agit.in/g/300011802/wall/318302618#comment_panel_318351568"}
+      ]
+    },
+    "charlieTool":{
+      "title":"[임시] <커피프렌즈> 오픈채팅 라이브",
+      "hashId":"603802307f432d0ce5e352284a9b9263",
+      "versionId":"V3 2897"
+    },
+    "issues":[
+      {"name":"테스트 이슈", "desc":"버튼 동작 이상 - 사파리"},
+      {"name":"오픈 이슈", "desc":"버튼 동작 이상 - 파이어폭스"},
+      {"name":"오픈 후 이미지 수정", "desc":"test1.png -> test1-1.png"},
+      {"name":"장애", "desc":"간헐적 페이지 깨짐 현상"}
+    ]
+  },
+  "config":{
+    "hasSNS":false
+  },
+  "imgaes": [
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    },
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    },
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    },
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    },
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    },
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    }
+  ]
+}

@@ -15,12 +15,12 @@ export default [
       exclude:['node_modules/**']
     }
   },
-  // {
-  //   input: path.join(jsPath, 'mo.js'),
-  //   output: { file: path.join(jsRollupPath, 'mo.rollup.js'), format: 'iife' }
-  // },
-  // {
-  //   input: path.join(jsPath, 'app.js'),
-  //   output: { file: path.join(jsRollupPath, 'app.rollup.js'), format: 'iife' }
-  // }
+  {
+    input: path.join(jsPath, 'mo.js'),
+    output: { file: path.join(jsRollupPath, 'mo.rollup.js'), format: 'iife' }
+  },
+  {
+    input: path.join(jsPath, 'app.js'),
+    output: { file: path.join(jsRollupPath, 'app.rollup.js'), format: 'iife' }
+  }
 ];

@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js",
     "open": "opn http://localhost:3000 --'google chrome' --incognito",
-    "create": "node src/config/createFiles.js",
+    "create": "node src/config/create/index.js",
+    "rollup": "rollup -c src/config/rollup.config.js",
     "build": "node src/config/replace.js",
-    "rollup": "rollup -w -c src/config/rollup.config.js"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
