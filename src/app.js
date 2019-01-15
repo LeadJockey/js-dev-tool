@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const cors = require('cors');
-
+const PORT = process.env.PORT;
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -20,7 +20,7 @@ app.use('*', (req, res) => res.status(404).json({
 }));
 // app.use('*', ));
 
-app.listen(process.env.PORT, () => console.log(`server started: listening on port : ${process.env.PORT}`));
+app.listen(PORT, () => console.log(`server started: listening on port : ${PORT}`));
 
 
 

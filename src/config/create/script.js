@@ -1,6 +1,6 @@
-const format = require('../../format.json');
-const hasSNS = format.config.hasSNS || false; 
-const hasVideo = format.config.hasVideo || false; 
+const project = require('../../project.json');
+const hasSNS = project.config.hasSNS || false; 
+const hasVideo = project.config.hasVideo || false; 
 
 function getScript(opts){
 return `

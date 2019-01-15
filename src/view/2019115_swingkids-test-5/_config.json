@@ -1,0 +1,18 @@
+{
+  "name": "swingkids-test-5",
+  "config": {
+    "templates": [
+      "app",
+      "mo",
+      "pc"
+    ],
+    "hasSNS": true,
+    "hasVideo": true
+  },
+  "imgaes": [
+    {
+      "title": "test1.png",
+      "hashId": "EFSE/REFSJ/324EFSE"
+    }
+  ]
+}

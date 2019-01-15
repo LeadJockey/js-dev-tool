@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const format = require('../../format.json');
+const project = require('../../project.json');
 const rootPath = path.join(__dirname, '..', '..', 'view');
 const readmeTmpl = require('./readme');
 const headTmpl = require('./head');
 const bodyTmpl = require('./body');
 const scriptTmpl = require('./script');
-const fileName = format.name || "temp"
+const fileName = project.name || "temp"
 const dirname = `${getNow()}_${fileName}`;
 
 function getNow(){
@@ -38,17 +38,16 @@ async function init() {
   if (!dirname) return;
 
   const dirPath = path.join(rootPath, dirname);
-  const jsPath = path.join(dirPath,'js');
-
   await createDir(rootPath, dirname);
   await createDir(dirPath, 'image');
 
-  await createFile(dirPath, 'app.ftl', mergeTmpl(headTmpl.mo, bodyTmpl, scriptTmpl));
-  await createFile(dirPath, 'mo.ftl',  mergeTmpl(headTmpl.mo, bodyTmpl, scriptTmpl));
-  await createFile(dirPath, 'pc.ftl',  mergeTmpl(headTmpl.pc, bodyTmpl, scriptTmpl));
+  const templates = project.config.templates;
+  if(templates.indexOf('app') > -1) await createFile(dirPath, 'app.ftl', mergeTmpl(headTmpl.mo, bodyTmpl, scriptTmpl));
+  if(templates.indexOf('mo') > -1) await createFile(dirPath, 'mo.ftl',  mergeTmpl(headTmpl.mo, bodyTmpl, scriptTmpl));
+  if(templates.indexOf('pc') > -1) await createFile(dirPath, 'pc.ftl',  mergeTmpl(headTmpl.pc, bodyTmpl, scriptTmpl));
 
   await createFile(dirPath, 'README.md', readmeTmpl);
-  await createFile(dirPath, '_config.json', JSON.stringify(format, null, 2));
+  await createFile(dirPath, '_config.json', JSON.stringify(project, null, 2));
 }
 
 init();

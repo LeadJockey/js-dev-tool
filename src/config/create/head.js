@@ -1,5 +1,5 @@
-const format = require('../../format.json');
-const hasSNS = format.config.hasSNS || false; 
+const project = require('../../project.json');
+const hasSNS = project.config.hasSNS || false; 
 
 function getMobileReset(){
   return `
