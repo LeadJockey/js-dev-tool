@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
-const router = express.Router();
-const fs = require('fs');
 const Freemarker = require('freemarker');
+const fs = require('fs');
+const router = express.Router();
 const viewRoot = path.join(__dirname, '..', 'view');
-const fm = new Freemarker({root:viewRoot});
+const fm = new Freemarker();
 
-function getTemplateData(dirname){
+function getTemplData(dirname, filename, tmplRoot){
   /**
    * is_alert : 얼럿이 있으면 띄움, 
    * eventTitle : 이벤트 명, 
@@ -30,18 +30,30 @@ function getTemplateData(dirname){
     appUserId: 'selifehahfa',
     webSourceCache: '12847129',
     os: 'I',
-    content_url: '',//path.join(__dirname, '..', 'view', dirname, 'images/')
-    contextPath: ''
+    content_url: path.join(__dirname, '..', 'view', dirname, 'image/'),
+    contextPath: '',
+    fileType:filename.toUpperCase()
   }
 }
 
+function getLayoutTmpl(viewRoot, tmplRoot){
+  const data = fs.readFileSync(tmplRoot, 'utf-8');
+  const reg = /<head>(.*)<\/head>/s;
+  const isHeadTmpl = data.match(reg);
+  const headData = RegExp.$1;
+  const bodyData = data.replace(reg,'');
+
+  const indexTmpl = fs.readFileSync(path.join(viewRoot, 'index.ftl'), 'utf-8');
+  return indexTmpl.replace('{REPLACE:HEAD}', headData)
+                  .replace('{REPLACE:BODY}', bodyData);
+}
+
 router.get('/', (req,res,next)=>{
-  const workList = fs.readdirSync(viewRoot).filter(file => file !== 'workList.ftl');
-  const data = {
-    workList,
-    host:`http://localhost:${process.env.PORT}`
-  };
-  fm.renderFile(path.join(viewRoot, 'workList.ftl'), data, (err, result, errout) =>{
+  const workList = fs.readdirSync(viewRoot).filter(file => (file !== 'workList.ftl' && file !== 'index.ftl'));
+  const tmpl = fs.readFileSync(path.join(viewRoot, 'workList.ftl'));
+  const data = {workList, host:`http://localhost:${process.env.PORT}`};
+
+  fm.render(tmpl, data, (err, result, errout) =>{
     res.send(!!err ? errout + err : result);
   });
 });
@@ -49,12 +61,12 @@ router.get('/', (req,res,next)=>{
 router.get('/:dir/:file', (req,res, next)=>{
   const dirname = req.params.dir;
   const filename = req.params.file;
-  const targetPath = `${path.join(dirname, 'templates', filename)}.ftl`;
-  console.log('dir', dirname);
-  console.log('file', filename);
-  console.log('target', targetPath);
-  
-  fm.renderFile(path.join(dirname, `${filename}.ftl`), getTemplateData(dirname), (err, result, errout) =>{
+  const viewRoot = path.join(__dirname, '..', 'view');
+  const tmplRoot = path.join(viewRoot, dirname, `${filename}.ftl`);
+  const layoutTmpl = getLayoutTmpl(viewRoot, tmplRoot);
+  const tmplData = getTemplData(dirname, filename, tmplRoot);
+
+  fm.render(layoutTmpl, tmplData, (err, result, errout) =>{
     res.send(!!err ? errout + err : result);
   });
 });

@@ -1,5 +1,5 @@
 {
-  "name": "swingkids",
+  "name": "swingkids-test",
   "readme": {
     "title": "ex) 스윙키즈 데뷔무대 라이브 프로모션 페이지 제작",
     "manager":{
@@ -29,7 +29,8 @@
     ]
   },
   "config":{
-    "hasSNS":false
+    "hasSNS":true,
+    "hasVideo":true
   },
   "imgaes": [
     {

@@ -4,6 +4,25 @@
   <meta name="keywords" content="카카오페이지">
   <meta name="description" content="카카오페이지">
   
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="카카오페이지" />
+  <meta property="og:locale" content="ko_KR">
+  <meta property="fb:app_id" content="574884132543436" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@kakaopage">
+  <meta name="twitter:creator" content="@kakaopage">
+
+  <!-- sns meta start -->
+  <meta property="og:title" content="카카오페이지 공유하기 타이틀" />
+  <meta property="og:description" content="카카오페이지 공유하기 설명" />
+  <meta property="og:image" content="imgHashId">
+  <meta property="og:url" content="https://page.kakao.com/store/event/v2/{uid}" />
+  <meta name="twitter:title" content="카카오페이지 공유하기 타이틀">
+  <meta name="twitter:description" content="카카오페이지 공유하기 설명" />
+  <meta name="twitter:image" content="{imgHashId}">
+  <meta name="twitter:url" content="https://page.kakao.com/store/event/v2/{uid}">
+  <!-- sns meta end -->
+  
   
   
   <style>
@@ -33,9 +52,7 @@
   
 <div id="kakaoPromotion">
   <div id="kakaoHead">
-    ${content_url}
-    ${contextPath}
-    pc
+    <!-- your code here -->
   </div>
   <div id="kakaoContent">
     <img src="${content_url}bpXzkp/hyqFdx6IeV/hUTmKf521Wb3gXrqQrbCA1" class="prm_img" alt="">
@@ -43,6 +60,9 @@
 </div>
   
   
+<script src="${contextPath}/resources/js/clipboard.min.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script src="https://tv.kakao.com/player/script/sdk/player_api.min.js"></script>
 <script>
 $(document).ready(function(){
   //your code 
