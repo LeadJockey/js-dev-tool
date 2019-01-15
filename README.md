@@ -2,16 +2,9 @@
 
 kakaopage 찰리툴 로컬 개발용 툴
 
-node 8 버전 이상 지원
-
 ## command line use age
-```
-npm run create -- --dirname={dirname}
-npm run create
-npm run rollup -- --dirname={dirname}
-npm run build
-npm start
-npm run open
-```
 
 src.format.json 작성후 npm run create
+npm start 로컬서버 시작
+
+01.15 초기 셋팅 버젼 완료 0.0.1
