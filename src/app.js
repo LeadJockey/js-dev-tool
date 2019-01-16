@@ -18,7 +18,6 @@ app.use('*', (req, res) => res.status(404).json({
   msg:'Page Not Found',
   url:`localhost:${process.env.PORT}://{directory-name}/{file-name}` 
 }));
-// app.use('*', ));
 
 app.listen(PORT, () => console.log(`server started: listening on port : ${PORT}`));
 

@@ -1,0 +1,10 @@
+{
+  "name": "create-test3",
+  "config":{
+    "templates": ["app","pc", "mo"],
+    "dependencies":["common", "player", "render", "socialShare"]
+  },
+  "imgaes": [
+    {"title": "test1.png","hashId": "EFSE/REFSJ/324EFSE"}
+  ]
+}

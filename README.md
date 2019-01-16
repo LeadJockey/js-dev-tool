@@ -4,18 +4,18 @@
 
 ## command line use age
 
-1. README.md 내 poject.json 폴터 생성 후 양식에 맞게 기제  
-2. 터미널에 npm run create -> 폴도구조 생성  
-3. 터미널에 npm start -> 로컬서버 시작  
+1. 터미널에 npm i -> 노드모듈 설치
+2. 터미널에 npm run init -> project.json 생성 -> 옵션설정 (project.json 참조)
+3. 터미널에 npm run create -> 폴도구조 생성  -> README.md 작성
+4. 터미널에 npm start -> 로컬서버 시작  
 
 ## project.json
 ```
 {
-  "name": "swingkids-test-5",         -- 프로젝트 폴더 명
+  "name": "create-test3",-- 프로젝트 폴더 명
   "config":{
-    "templates": ["app","mo","pc"],   -- 탬플릿 종류 목록
-    "hasSNS":true,                    -- SNS 기능
-    "hasVideo":true                   -- Player 기능
+    "templates": ["app","pc", "mo"],-- 탬플릿 종류 목록
+    "dependencies":["common", "player", "render", "socialShare"]-- 기능 종류 목록
   },
   "imgaes": [
     {
@@ -29,3 +29,4 @@
 ## version
 
 * 19.01.15 초기 탬플릿 셋팅 및 로컬 서버 구현
+* 19.01.16 공통 함수/ format 설정, project.json 추가
