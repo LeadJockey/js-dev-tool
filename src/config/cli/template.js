@@ -12,24 +12,17 @@ function getHTML(setting) {
 
 return `
 <head>
-  ${addDefaultMeta()}
-  ${meta}
-
-  <style>
-      ${addReset(type)}
-      ${style}
-  </style>
-
+${addDefaultMeta().trim()}
+${meta.trim()}
+<style>
+${addReset(type).trim()}
+${style.trim()}
+</style>
 </head>
-
-${addLayout()}
-
-${cdn}
-
+${addLayout().trim()}
+${cdn.trim()}
 <script>
-
-  ${addScript(func)}
-
+${addScript(func).trim()}
 </script>`;
 }
 
@@ -38,8 +31,7 @@ function getREADME(){
 }
 
 function addDefaultMeta() {
-return `
-<meta name="author" content="카카오페이지">
+return `<meta name="author" content="카카오페이지">
 <meta name="keywords" content="카카오페이지">
 <meta name="description" content="카카오페이지">`;
 }
@@ -55,8 +47,7 @@ function addLayout(){
 }
 
 function addScript(func){
-return `
-$(document).ready(function(){
+return `$(document).ready(function(){
   'use strict';
 
   ${func}

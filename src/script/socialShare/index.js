@@ -20,8 +20,7 @@ return `
 <meta name="twitter:description" content="카카오페이지 공유하기 설명" />
 <meta name="twitter:image" content="{imgHashId}">
 <meta name="twitter:url" content="https://page.kakao.com/store/event/v2/{uid}">
-<!-- social share meta end -->
-`;
+<!-- social share meta end -->`;
 }
 
 function getCDN(){

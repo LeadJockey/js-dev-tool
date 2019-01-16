@@ -15,7 +15,7 @@ function getTemplateOption(dependencies, defaultOption){
     if(typeof templateOption !== 'object') return;
 
     Object.entries(templateOption).forEach(([k,v])=>{
-      opt[k] = opt[k] ? `${opt[k]}\n${v}` : `${v}`;
+      opt[k] = opt[k] ? `${opt[k]}${v}` : `${v}`;
     });
   })
   return opt;
